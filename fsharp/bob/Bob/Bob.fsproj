@@ -43,7 +43,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Test.fs" />
     <None Include="packages.config" />
     <Compile Include="Bob.fs" />
     <Compile Include="BobTest.fs" />
