@@ -1,6 +1,5 @@
 # Exercism ignores
-python/.cache/*
-*/.cache/*
+**/.cache
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
