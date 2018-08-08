@@ -23,11 +23,13 @@ class Robot(object):
                                      (self.bearing.real, self.bearing.imag)))
 
     def simulate(self, commands):
+        '''does a thing
+        '''
         mapping = {'R': self.turn_right,
                    'L': self.turn_left,
                    'A': self.advance}
-        for c in commands:
-            if c in mapping:
-                mapping[c]()
+        for command in commands:
+            if command in mapping:
+                mapping[command]()
             else:
-                raise ValueError("Unknown Command {}".format(c))
+                raise ValueError("Unknown Command {}".format(command))
