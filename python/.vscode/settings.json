@@ -1,21 +1,16 @@
 {
-    "python.jediEnabled": false,
-    "python.pythonPath": "${workspaceFolder}/venv/bin/python",
-    "python.linting.pylintPath": "${workspaceFolder}/venv/bin/pylint",
-    "python.venvFolders": [
-        "venv",
-        "env",
-        "envs",
-        ".pyenv",
-        ".direnv"
-      ],
-    "python.unitTest.pyTestEnabled": false,
-    "python.unitTest.nosetestsEnabled": false,
+    "python.pythonPath": "${workspaceFolder}/env/bin/python",
+    "python.linting.pylintPath": "${workspaceFolder}/env/bin/pylint",
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintUseMinimalCheckers": false,
     "python.unitTest.unittestEnabled": false,
-    "python.unitTest.promptToConfigure": false,
-    "python.linting.ignorePatterns": [
-        ".vscode/*.py",
-        "**/site-packages/**/*.py",
-        "**/unittest/**/*.py"
-      ],
+    "python.unitTest.nosetestsEnabled": false,
+    "python.unitTest.pyTestEnabled": true,
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        "./",
+        "-p",
+        "*_test.py"
+    ]
 }
