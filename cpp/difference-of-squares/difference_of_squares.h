@@ -1,6 +1,6 @@
 #if !defined(SQUARES_H)
 #define SQUARES_H
-// #define EXERCISM_RUN_ALL_TESTS
+#define EXERCISM_RUN_ALL_TESTS
 
 #include <math.h>
 
