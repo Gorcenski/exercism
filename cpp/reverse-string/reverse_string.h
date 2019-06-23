@@ -5,12 +5,9 @@
 #include <string>
 
 namespace reverse_string {
-    std::string reverse_string(std::string input)
+    inline std::string reverse_string(const std::string& input)
     {
-        std::string output;
-        std::copy(input.crbegin(), input.crend(), std::back_inserter(output));
-
-        return output;
+        return std::string(input.crbegin(), input.crend());
     }
 }
 
