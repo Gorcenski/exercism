@@ -5,7 +5,7 @@
 #include <climits>
 
 namespace grains {
-    inline unsigned long long square(int n)
+    inline unsigned long long square(const int n)
     {
         return 1ULL << (n - 1);
     }
