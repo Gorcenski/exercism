@@ -5,29 +5,29 @@
 namespace space_age {
     class space_age {
     private:
-        const double _mercury = 0.2408467;
-        const double _venus = 0.61519726;
-        const double _earth = 1.0;
-        const double _mars = 1.8808158;
-        const double _jupiter = 11.862615;
-        const double _saturn = 29.447498 ;
-        const double _uranus = 84.016846;
-        const double _neptune = 164.79132;
+        static constexpr long _seconds_per_earth_year = 31557600;
+        static constexpr double _mercury = 0.2408467;
+        static constexpr double _venus = 0.61519726;
+        static constexpr double _earth = 1.0;
+        static constexpr double _mars = 1.8808158;
+        static constexpr double _jupiter = 11.862615;
+        static constexpr double _saturn = 29.447498 ;
+        static constexpr double _uranus = 84.016846;
+        static constexpr double _neptune = 164.79132;
 
-        long _seconds;
-        inline double convert(const double& period) const
+        long long _seconds;
+        double convert(double period) const
         {
-            const long seconds_per_earth_year = 31557600; // seconds per Earth year
-            return _seconds / (seconds_per_earth_year * period);
+            return _seconds / (_seconds_per_earth_year * period);
         }
 
     public:
-        space_age(const long& seconds)
+        explicit space_age(const long long seconds)
         {
             _seconds = seconds;
         }
 
-        int seconds() const
+        long long seconds() const
         {
             return _seconds;
         }
