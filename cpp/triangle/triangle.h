@@ -37,18 +37,21 @@ namespace triangle {
         if (definitelyGreaterThan(n, perimeter, epsilon) || (perimeter == 0))
         {
             throw std::domain_error("This triangle breaks the law.");
-        } else if (essentiallyEqual(n, perimeter, epsilon))
+        }
+        else if (essentiallyEqual(n, perimeter, epsilon))
         {
             return flavor::degenerate;
         }
-        else {
+        else
+        {
             bool ab_eq = essentiallyEqual(a, b, epsilon);
             bool bc_eq = essentiallyEqual(b, c, epsilon);
             bool ac_eq = essentiallyEqual(a, c, epsilon);
             if (ab_eq && bc_eq)
             {
                 return flavor::equilateral;
-            } else if (ab_eq || bc_eq || ac_eq)
+            }
+            else if (ab_eq || bc_eq || ac_eq)
             {
                 return flavor::isosceles;
             }
