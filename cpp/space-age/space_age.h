@@ -5,7 +5,7 @@
 namespace space_age {
     class space_age {
     private:
-        static constexpr long _seconds_per_earth_year = 31557600;
+        static constexpr int _seconds_per_earth_year = 31557600;
         static constexpr double _mercury = 0.2408467;
         static constexpr double _venus = 0.61519726;
         static constexpr double _earth = 1.0;
