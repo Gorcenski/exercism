@@ -9,6 +9,19 @@
 #include <string>
 #include <vector>
 
+/**
+ * Note to the reviewer: why did I solve it like this?
+ * 
+ * Because this problem is basically fizzbuzz, and I am well-familiar with fizzbuzz
+ * and the elementary control flow concepts it is designed around. I wanted a more
+ * challenging solution that would teach me some of the deeper features of the language,
+ * e.g. how do I do something that looks like "map-reduce" in C++11? What is a functor?
+ * How do iterators work?
+ * 
+ * So, rather than the elementary solution, I created a solution that leverages the
+ * fact that the torsion subgroup of the circle group is the set of all nth roots of unity
+ * for all n, and then did some string-munging from there.
+ */
 namespace raindrops {
     typedef std::map<int, std::string>::value_type kv_pair;
     static constexpr float epsilon = std::numeric_limits<float>::epsilon();
