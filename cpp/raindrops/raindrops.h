@@ -3,9 +3,7 @@
 #define EXERCISM_RUN_ALL_TESTS
 
 #include <complex>
-#include <iterator>
 #include <map>
-#include <sstream>
 #include <string>
 #include <vector>
 
@@ -55,9 +53,10 @@ namespace raindrops {
     {
         
         std::vector<std::string> strings;
-        std::transform(drops.begin(), drops.end(),
-            std::inserter(strings, strings.begin()),
-            get_sound(n)
+        std::transform(drops.begin(),
+                       drops.end(),
+                       std::inserter(strings, strings.begin()),
+                       get_sound(n)
         );
         std::string result;
         std::for_each(strings.begin(), strings.end(), [&](const std::string &p) { result += p; });
