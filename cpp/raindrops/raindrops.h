@@ -2,6 +2,7 @@
 #define RAINDROPS_H
 #define EXERCISM_RUN_ALL_TESTS
 
+#include <algorithm>
 #include <complex>
 #include <map>
 #include <string>
@@ -51,15 +52,8 @@ namespace raindrops {
                                    {7, "Plong"}
                                })
     {
-        
-        std::vector<std::string> strings;
-        std::transform(drops.begin(),
-                       drops.end(),
-                       std::inserter(strings, strings.begin()),
-                       get_sound(n)
-        );
         std::string result;
-        std::for_each(strings.begin(), strings.end(), [&](const std::string &p) { result += p; });
+        std::for_each(drops.begin(), drops.end(), [&](const kv_pair &p) { result += get_sound(n)(p); });
         return result.empty() ? std::to_string(n) : result;
     }
 }
